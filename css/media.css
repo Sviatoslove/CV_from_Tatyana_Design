@@ -32,7 +32,7 @@
     display: block;
   }
   .menu__item {
-    margin: 10px 0px 10px 15px;
+    margin: 10px 35px 10px 15px;
     font-size: 14px;
   }
   .menu__burger__header {
@@ -40,7 +40,7 @@
     width: 40px; /* определяем размеры блока */
     height: 35px;
     display: block;
-    margin: 0 600px 0 30px;
+    margin: 0 470px 0 30px;
   }
   .menu__burger__header span, .menu__burger__header:after, .menu__burger__header:before{
     height: 3px;
