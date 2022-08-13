@@ -1,4 +1,11 @@
 var icon = document.querySelector('.icon');
+let menuBurger = document.querySelector('.menu__burger__header');
+let menuNav = document.querySelector('.nav');
+
+menuBurger.addEventListener('click', () => {
+  menuBurger.classList.toggle('open_menu');
+  menuNav.classList.toggle('open_menu');
+});
 
 var stepLeft = 0;
 var stepRight = 150;

@@ -1,7 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background-color: #f5f7fa;
   font-family: 'Montserrat', sans-serif;
   padding: 40px 0;
+  color: #000000;
+  margin: 0;
+}
+div, p, form, input, button, a, span {
+  box-sizing: border-box;
 }
 .d-flex {
   display: flex;
@@ -12,18 +19,24 @@ body {
 .align-items-center {
   align-items: center;
 }
+a, button, input {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
 .container {
-  width: 1200px;
-  background: #fff;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.9);
 }
+
+/* ----------------Header------------- */
 .content {
   display: flex;
-  flex-direction: row-reverse;
 }
 .content__menu {
-  flex-direction: inherit;
   justify-content: space-around;
   align-items: center;
   background-color: #fb6d3a;
@@ -32,8 +45,7 @@ body {
 .logo {
   width: 40px;
 }
-a {
-  text-decoration: none;
+.open__menu  {
   
 }
 .menu__link:hover, .menu__item:hover {
@@ -45,14 +57,6 @@ a {
   padding: 0 2px;
   transform: scale(1.3);
   transition: all 0.5s ease;
-
-}
-a :hover {
-}
-a, button, input {
-  color: #fff;
-  transition: all 0.5s ease;
-
 }
 .menu__item:not(:last-child) {
   margin-right: 35px;
@@ -60,8 +64,8 @@ a, button, input {
 .slogan__content {
   padding: 300px 0;
   background: url(../img/kub-geometriya-annotaciya.jpg) no-repeat center center / cover;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 30px;
+  line-height: 75px;
   color: #e4ff00;
   font-family: 'Lifehack';
   text-align: center;
@@ -74,161 +78,10 @@ a, button, input {
   max-width: 900px;
   width: 100%;
   border-radius: 20px;
-  padding: 0 5px;
   margin: 0 auto;
 }
 
-/* main content section */
-
-.main__content {
-  display: flex;
-  flex-direction: column;
-  padding: 100px 90px;
-}
-
-.main__content__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 27px;
-  color: #000000;
-  margin-bottom: 10px;
-}
-
-/* about me section */
-
-.about__me {
-  margin: 0 0 40px 0;
-}
-
-.about__me__profession {
-  font-size: 14px;
-  color: #000;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 17px;
-  margin: 0 0 20px 0;
-}
-
-.about__me__name {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 55px;
-  margin: 0 0 25px 0;
-  color: #000;
-}
-
-.about__me__discription {
-  width: 400px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #595959;
-}
-
-/* my project section */
-
-.my__project__section {
-  margin: 0 0 50px 0;
-}
-
-.my__project__list {
-  padding: 0 0 0 17px;
-}
-
-.my__project__item {
-  color: #000;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.my__project__text {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #595959;
-  margin-left: 5px;
-}
-
-.my__project__link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #595959;
-}
-
-.my__project__bracket {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  color: #000000;
-}
-
-/* my work experience */
-
-.my__work__experience__section {
-  margin-bottom: 45px;
-}
-
-.my__work__experience__company {
-  color: #fb6d3a;
-}
-
-.my__work__experience__position {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0 0 10px 0;
-}
-
-.my__work__experience__duties {
-  padding: 0 0 0 18px;
-}
-
-.my__work__experience__duty {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #595959;
-}
-
-.my__work__experience__period {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  color: #a8a8a8;
-  margin: 0 0 10px 0;
-}
-
-.my__work__experience__divider {
-  color: #000;
-}
-
-
-.my__work__experience__company__block {
-  margin-bottom: 15px;
-}
-
-.my-work-experience-section {
-}
-.my-education-section {
-}
-
-/* sidebar-section */
-.bookmark {
-  padding: 20px;
-  background-color: #e6620a;
-}
+/*---------- sidebar -----------*/
 .sidebar {
   background-color: #1e2939;
   width: 370px;
@@ -238,22 +91,23 @@ a, button, input {
   margin: 20px;
   border-radius: 5px;
 }
+.bookmark {
+  padding: 20px;
+  background-color: #e6620a;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 .sidebar__photo {
   width: 370px;
   height: 380px;
   object-fit: cover;
   object-position: 0px -15px;
 }
-
+/* ----------contacts----------*/
 .contacts,
 .tech__skills {
   margin: 50px 0 0 40px;
 }
-
-.soft__skills {
-  margin: 45px 0 0 40px;
-}
-
 .sidebar__title {
   font-style: normal;
   font-weight: bold;
@@ -262,7 +116,14 @@ a, button, input {
   color: #fff;
   margin-bottom: 10px;
 }
-/* contacts section */
+.block__link {
+  margin-bottom: 10px;
+}
+.block__link:hover {
+  background-color: #3e4d5f;
+  transition: all 0.5s ease;
+
+}
 .contacts__type {
   font-style: normal;
   font-weight: bold;
@@ -272,7 +133,6 @@ a, button, input {
   margin-right: 8px;
   padding: 0 0 0 30px;
 }
-
 .contacts__link {
   color: #8e949c;
   font-style: normal;
@@ -280,8 +140,17 @@ a, button, input {
   font-size: 14px;
   line-height: 24px;
 }
-.block__link {
-  margin-bottom: 10px;
+.contacts__link:hover, .block__link:hover {
+  color: #f5f7fa;
+  transition: all 0.5s ease;
+  transform: scale(1.3);
+}
+.contacts__telegram {
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+.contacts__link__telegram {
 }
 .icon {
   position: absolute;
@@ -297,38 +166,143 @@ a, button, input {
   transform: scale(3);
   transition: all 1.2s ease;
 }
-.block__link:hover {
-  background-color: #3e4d5f;
-  transition: all 0.5s ease;
 
-} 
-.contacts__link:hover, .block__link:hover {
-  color: #f5f7fa;
-  transition: all 0.5s ease;
-  transform: scale(1.3);
-}
-.contacts__telegram {
-  position: relative;
-  align-items: center;
-  display: flex;
-}
-.contacts__link__telegram {
-}
 /*skills sections */
-
-
+.tech__skills {
+}
 .skills__list {
   padding: 0 0 0 30px;
 }
-
 .skills__item {
   color: #fa8e00;
 }
-
-.skills_item_text {
+.skills__item__text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: #fff;
+}
+.soft__skills {
+  margin: 45px 0 0 40px;
+}
+
+/* main content */
+.main__content {
+  padding: 100px 90px;
+}
+/* about me section */
+.about__me {
+  margin: 0 0 40px 0;
+}
+.about__me__profession {
+  font-size: 14px;
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 17px;
+  margin: 0 0 20px 0;
+}
+.about__me__name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  margin: 0 0 25px 0;
+  color: #000;
+}
+.about__me__discription {
+  max-width: 400px;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+
+/* my project section */
+.my__project__section {
+  margin: 0 0 50px 0;
+}
+.main__content__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.my__project__list {
+  padding: 0 0 0 17px;
+}
+.my__project__item {
+  color: #000;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+.my__project__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+  margin-left: 5px;
+}
+.my__project__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+.my__project__bracket {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* my work experience */
+
+.my__work__experience__section {
+  margin-bottom: 45px;
+}
+.my__work__experience__position {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 10px 0;
+}
+.my__work__experience__company {
+  color: #fb6d3a;
+}
+.my__work__experience__divider {
+  color: #000;
+}
+.my__work__experience__company {
+}
+.my__work__experience__period {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #a8a8a8;
+  margin: 0 0 10px 0;
+}
+.my__work__experience__duties {
+  padding: 0 0 0 18px;
+}
+.my__work__experience__duty {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+.my-education-section {
 }
