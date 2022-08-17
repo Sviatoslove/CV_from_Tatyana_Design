@@ -1,9 +1,29 @@
 /*---------------------- Media Queries-------------- */
-
+/* 1200px - & */
+@media screen and (max-width: 100000px) {
+  .mouse__over {
+    display: none;
+  }
+  .mouse__over__sidebar {
+    display: none;
+  }
+  .back_to_top {
+    right: 8em;
+  }
+}
 /* 992- 1200px */
 @media screen and (max-width: 1200px) {
   .container {
     width: 95%;
+  }
+  .mouse__over {
+    display: none;
+  }
+  .mouse__over__sidebar {
+    display: none;
+  }
+  .back_to_top {
+    right: 40px;
   }
 }
 /* 768-992px */
@@ -50,7 +70,12 @@
     transition: all 0.5s ease;
     cursor: pointer;
   }
-
+  .mouse__over {
+    display: block;
+    margin-left: 48px;
+    padding-top: 9px;
+    color: #fff;
+  }
   .menu__burger__header span, .menu__burger__header:after, .menu__burger__header:before{
     height: 3px;
     width: 100%;
@@ -113,6 +138,12 @@
   .icon {
     margin-left: 30px;
   }
+  .mouse__over__sidebar {
+    display: none;
+  }
+  .back_to_top {
+    right: 52px;
+  }
 }
 
 /* 576-768px */
@@ -130,6 +161,10 @@
   .menu__burger__header {
     width: 29px;
     height: 29px;
+  }
+  .mouse__over {
+    margin-left: 37px;
+    padding-top: 6px;
   }
   .wrapper__burger.open_menu {
     max-width: 166.13px;
@@ -174,8 +209,11 @@
     height: 35px;
     transition: all 1s ease;
     left: 2em;
-    top: 8em;
+    top: 8.4em;
     cursor: pointer;
+  }
+  .mouse__over__sidebar {
+    display: block;
   }
   .burger__sidebar.open_menu {
     left: 22em;
@@ -194,7 +232,6 @@
     left: 10px;
     height: 90.5%;
   } 
-  
   .burger__sidebar span, .burger__sidebar:after, .burger__sidebar:before{
     height: 3px;
     width: 100%;
@@ -215,7 +252,6 @@
   .burger__sidebar:before{
     top: 6px;
   }
-  
   .burger__sidebar.open_menu span {
     opacity:0; 
     transition: 1s; 
@@ -226,7 +262,6 @@
     transition: 1s;
     background-color: rgb(0, 0, 0);
     width: 80%;
-
   }
   .burger__sidebar.open_menu:after {
     transform: rotate(-38deg);
@@ -235,9 +270,8 @@
     background-color: rgb(0, 0, 0);
     width: 80%;
   }  
-
   .main__content {
-    padding: 0vw 4vw;
+    padding: 0vw 5vw;
     margin-bottom: 30px;
   }
   .about__me__name {
@@ -251,5 +285,8 @@
   }
   .container {
     width: 90%;
+  }
+  .back_to_top {
+    right: 30px;
   }
 }
