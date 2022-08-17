@@ -9,6 +9,30 @@ let mouseOverSidebar = document.querySelector('.mouse__over__sidebar');
 let capabilitiesItemLink = document.querySelector('.capabilities');
 let goTopBtn = document.querySelector('.back_to_top');
 
+document.addEventListener('click', e => {
+  const backlight = (elem) => {
+    setTimeout(() => {
+      elem.classList.add('backlight')
+    },1150);
+    setTimeout(() => {
+      elem.classList.remove('backlight')
+    },1350);
+  }
+  let menuLink = document.querySelectorAll('.menu__link');
+  let backlightItem = document.querySelectorAll('.backlight_item');
+  if(e.target === menuLink[0]) {
+    backlight(backlightItem[2]);
+  }else if(e.target === menuLink[1]) {
+    backlight(backlightItem[0]);
+  }else if(e.target === menuLink[2]) {
+    backlight(backlightItem[1]);
+  }else if(e.target === menuLink[3]) {
+    backlight(backlightItem[3]);
+  }else if(e.target === menuLink[4]) {
+    backlight(backlightItem[4]);
+  }
+})
+
 function backToTop() {
   if (window.pageYOffset > 0) {
     window.scrollBy(0, (-window.pageYOffset));
@@ -19,12 +43,13 @@ goTopBtn.addEventListener('click', backToTop);
 
 document.addEventListener("scroll", function() {
   if(window.pageYOffset >= 200) {
+    console.log(window.pageYOffset)
     goTopBtn.classList.add('back_to_top-show');
     menuBurger.classList.remove('open_menu');
     menuNav.classList.remove('open_menu');
     wrapperBurger.classList.remove('open_menu');
     mouseOver.classList.remove('none');
-  } else {
+  }else {
     goTopBtn.classList.remove('back_to_top-show');
   }
 });
@@ -32,7 +57,6 @@ document.addEventListener("scroll", function() {
 const moveSideBarBurger = () => {
   sideBarBurger.classList.toggle('open_menu');
   sideBar.classList.toggle('open_menu');
-  mouseOverSidebar.classList.contains('none');
   if(mouseOverSidebar.classList.contains('none')){
     setTimeout(() => {
       mouseOverSidebar.classList.toggle('none');
@@ -46,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var widthWind = document.querySelector('body').offsetWidth;
   if (widthWind <= 768) {
     capabilitiesItemLink.addEventListener('click', moveSideBarBurger)
-  }
+  };
 });
 
 const moveMenuBurger = () => {
