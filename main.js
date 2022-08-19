@@ -1,4 +1,4 @@
-var icon = document.querySelector('.icon');
+let icon = document.querySelector('.icon');
 let menuBurger = document.querySelector('.menu__burger__header');
 let menuNav = document.querySelector('.nav');
 let sideBarBurger = document.querySelector('.burger__sidebar');
@@ -11,54 +11,66 @@ let goTopBtn = document.querySelector('.back_to_top');
 let sloganText = document.querySelector('.slogan__text');
 let wrapperSidebarBurger = document.querySelector('.wrapper__sidebar__burger');
 let tel = document.querySelector('.tel');
+let menuLink = document.querySelectorAll('.menu__link');
+let backlightItem = document.querySelectorAll('.backlight_item');
 
-document.addEventListener('click', e => {
-  const backlight = (elem) => {
+
+const mediaQuery = window.matchMedia('(max-width: 538px)')
+
+const backlight = elemMenu => {
+  let timeoutBacklight = elem => {
     setTimeout(() => {
       elem.classList.add('backlight')
     }, 1150);
     setTimeout(() => {
       elem.classList.remove('backlight')
     }, 1350);
+  };
+  if(elemMenu === menuLink[0]) {
+    timeoutBacklight(backlightItem[3]);
+  }else if(elemMenu === menuLink[1]) {
+    if(sideBarBurger.classList.contains('open_menu')) {
+    timeoutBacklight(backlightItem[0]);
+    }else {
+      moveSideBarBurger();
+      timeoutBacklight(backlightItem[0]);
+    };
+  }else if(elemMenu === menuLink[2]) {
+    timeoutBacklight(backlightItem[2]);
+  }else if(elemMenu === menuLink[3]) {
+    timeoutBacklight(backlightItem[4]);
+  }else if(elemMenu === menuLink[4]) {
+    timeoutBacklight(backlightItem[5]);
+  }else if(elemMenu === menuLink[5]) {
+    if(sideBarBurger.classList.contains('open_menu')) {
+    timeoutBacklight(backlightItem[1]);
+    }else {
+      moveSideBarBurger();
+      timeoutBacklight(backlightItem[1]);
+    };
   }
-  let menuLink = document.querySelectorAll('.menu__link');
-  let backlightItem = document.querySelectorAll('.backlight_item');
-  if(e.target === menuLink[0]) {
-    backlight(backlightItem[3]);
-  }else if(e.target === menuLink[1]) {
-    backlight(backlightItem[0]);
-  }else if(e.target === menuLink[2]) {
-    backlight(backlightItem[2]);
-  }else if(e.target === menuLink[3]) {
-    backlight(backlightItem[4]);
-  }else if(e.target === menuLink[4]) {
-    backlight(backlightItem[5]);
-  }else if(e.target === menuLink[5]) {
-    backlight(backlightItem[1]);
-  }
-})
+};
 
-function backToTop() {
+const backToTop = () => {
   if (window.pageYOffset > 0) {
     window.scrollBy(0, (-window.pageYOffset));
   };
 };
 
-goTopBtn.addEventListener('click', backToTop);
+const closeBurgerMenu = () => {
+  menuBurger.classList.remove('open_menu');
+  menuNav.classList.remove('open_menu');
+  wrapperBurger.classList.remove('open_menu');
+  mouseOver.classList.remove('none');
+  sloganText.classList.remove('open__menu__slogan__text');
+}
 
-document.addEventListener("scroll", function() {
-  if(window.pageYOffset >= 200) {
-    goTopBtn.classList.add('back_to_top-show');
-    menuBurger.classList.remove('open_menu');
-    menuNav.classList.remove('open_menu');
-    wrapperBurger.classList.remove('open_menu');
-    mouseOver.classList.remove('none');
-    sloganText.classList.remove('open__menu__slogan__text');
+const closeBurgerSidebar = () => {
+  sideBarBurger.classList.remove('open_menu');
+  sideBar.classList.remove('open_menu');
+  wrapperSidebarBurger.classList.remove('open_menu');
+}
 
-  }else {
-    goTopBtn.classList.remove('back_to_top-show');
-  }
-});
 
 const moveSideBarBurger = () => {
   sideBarBurger.classList.toggle('open_menu');
@@ -73,36 +85,107 @@ const moveSideBarBurger = () => {
   };
 };
 
-document.addEventListener("DOMContentLoaded", function() { 
-  let widthWind = document.querySelector('body').offsetWidth;
-  moveMenuBurger(widthWind);
-});
+const moveMenuBurger = () => {
+  menuBurger.classList.toggle('open_menu');
+  menuNav.classList.toggle('open_menu');
+  wrapperBurger.classList.toggle('open_menu');
+  mouseOver.classList.toggle('none');
+}
 
-const moveMenuBurger = z => {
-  const toggle = () => {
-    menuBurger.classList.toggle('open_menu');
-    menuNav.classList.toggle('open_menu');
-    wrapperBurger.classList.toggle('open_menu');
-    mouseOver.classList.toggle('none');
-  }
-  if(z <= 576) {
-    menuBurger.addEventListener('click', () => {
-      toggle();
-      sloganText.classList.toggle('open__menu__slogan__text');
-    });
-    capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
-  }  else if(z <= 768) {
-    menuBurger.addEventListener('click', () => {
-      toggle();
-    });
-    capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
-  }  else {
-    menuBurger.addEventListener('click', toggle);
+const checkNone = () => {
+  if(mouseOverSidebar.classList.contains('none')) {
+    mouseOverSidebar.classList.remove('none');
   };
 };
 
-sideBarBurger.addEventListener('click', moveSideBarBurger);
-tel.addEventListener('click', moveSideBarBurger);
+document.addEventListener("scroll", function() {
+  if(window.pageYOffset >= 50) {
+    goTopBtn.classList.add('back_to_top-show');
+    closeBurgerMenu();
+  }else {
+    goTopBtn.classList.remove('back_to_top-show');
+  }
+});
+
+goTopBtn.addEventListener('click', () => {
+  backToTop();
+  closeBurgerSidebar();
+  checkNone();
+});
+
+const handleTabletChange = event => {
+  console.log(`change`)
+  let widthWind = document.querySelector('body').offsetWidth;
+  document.addEventListener('click', e => {
+    if(widthWind <= 768) {
+      console.log(1)
+      if(e.target === sideBarBurger && widthWind > 576) {
+        console.log(e.target === sideBarBurger)
+        moveSideBarBurger();
+        closeBurgerSidebar();
+        checkNone();
+      }else if(e.target === menuBurger) {
+        moveMenuBurger();
+      };
+      if(widthWind <= 576) {
+        console.log(3)
+        console.log(event.matches)
+        if(event.matches) {
+          console.log(2)
+          if(e.target === menuBurger) {
+            console.log(e.target === menuBurger)
+            moveMenuBurger();
+            sloganText.classList.toggle('open__menu__slogan__text');
+          }
+          backlight(e.target);
+        }else if (e.target === sideBarBurger) {
+          moveSideBarBurger();
+        }else if (e.target === sideBarBurger) {
+          moveMenuBurger();
+        };
+      };
+      backlight(e.target);
+    } else {
+      moveMenuBurger();
+      backlight(e.target);
+    };
+  });
+};
+
+mediaQuery.addListener(() => {
+  if(mediaQuery) {
+    closeBurgerMenu();
+    closeBurgerSidebar();
+    checkNone();
+  }else {
+    closeBurgerMenu();
+    closeBurgerSidebar();
+    checkNone();
+  };
+});
+
+mediaQuery.addListener(handleTabletChange(mediaQuery))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var stepLeft = 0;

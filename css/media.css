@@ -51,7 +51,7 @@
     top: 40px;
     background-color: rgb(251, 109, 58, 0.7);
     left: -100%;
-    transition: all 0.4s ease;
+    transition: all 0.8s ease;
   }
   .nav.open_menu {
     left: 40px;
@@ -104,7 +104,6 @@
     top: 6px;
   }
   .menu__burger__header.open_menu {
-    transform: translate(-100%);
   }
   .menu__burger__header.open_menu span {
     opacity:0; 
@@ -115,12 +114,14 @@
     top: 16px;
     transition: 0.4s;
     background-color: rgb(0, 0, 0);
+    left: 0;
   }
   .menu__burger__header.open_menu:after {
     transform: rotate(-38deg);
     bottom: 16px;
     transition: 0.4s;
     background-color: rgb(0, 0, 0);
+    left: 0;
   }
   .tel {
     position: absolute;
@@ -181,7 +182,6 @@
     width: 100%;
   }
   .menu__burger__header.open_menu {
-    transform: translate(-100%);
   }
   .menu__burger__header span, .menu__burger__header:after, .menu__burger__header:before {
     height: 2px;
@@ -252,6 +252,8 @@
   }
   .burger__sidebar span{
     top: 17px;
+    transition: all 0.1s ease;
+
   }
   .burger__sidebar:after, .burger__sidebar:before{
     content: '';
@@ -264,7 +266,7 @@
   }
   .burger__sidebar.open_menu span {
     opacity:0; 
-    transition: 1s; 
+    transition: all 0.1s ease;
   }
   .burger__sidebar.open_menu:before {
     transform: rotate(38deg);
@@ -272,6 +274,7 @@
     transition: 1s;
     background-color: rgb(0, 0, 0);
     width: 80%;
+    left: 0;
   }
   .burger__sidebar.open_menu:after {
     transform: rotate(-38deg);
@@ -279,6 +282,7 @@
     transition: 1s;
     background-color: rgb(0, 0, 0);
     width: 80%;
+    left: 0;
   }  
   .main__content {
     padding: 0vw 5vw;
@@ -321,6 +325,9 @@
   }
   .slogan__text {
     width: 242px;
+  }
+  .nav {
+    top: 20px;
   }
   .menu__burger__header {
     width: 20px;
@@ -378,7 +385,6 @@
   .burger__sidebar.open_menu {
     left: 0;
     top: 4.4em;
-    transform: translate(-100%);
   }
   .burger__sidebar.open_menu:before {
     top: 10px;
