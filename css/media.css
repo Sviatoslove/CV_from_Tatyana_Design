@@ -11,7 +11,10 @@
     right: 8em;
   }
 }
+
+
 /* 992- 1200px */
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 95%;
@@ -26,7 +29,10 @@
     right: 40px;
   }
 }
+
+
 /* 768-992px */
+
 @media screen and (max-width: 992px) {
   .container {
     width: 90%;
@@ -43,14 +49,16 @@
   .nav {
     position: absolute;
     top: 40px;
-    background-color: #fb6d3a;
+    background-color: rgb(251, 109, 58, 0.7);
     left: -100%;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
   }
   .nav.open_menu {
     left: 40px;
     text-align: left;
+    box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 70%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   } 
   .menu {
     display: block;
@@ -146,7 +154,9 @@
   }
 }
 
+
 /* 576-768px */
+
 @media screen and (max-width: 768px) {
   body {
     padding: 20px 0;
@@ -196,6 +206,9 @@
   }
   .tel {
     font-size: 13px;
+  }
+  .slogan__content {
+    padding: 134px 0;
   }
   .sidebar__photo, .photo {
     width: 370px;
@@ -275,7 +288,10 @@
     margin-bottom: 45px;
   }
 }
+
+
 /* 320-576px  */
+
 @media screen and (max-width: 576px) {
   .header {
     background-position: -45vw center;
@@ -283,7 +299,158 @@
   .container {
     width: 90%;
   }
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+  .wrapper__burger.open_menu {
+    max-width: 100px;
+  }
+  .menu__item {
+    font-size: 10px;
+    margin: 5px 10px 5px 15px;
+  }
+  .tel {
+    font-size: 8px;
+  }
+  .slogan__content {
+    padding: 45px 0;
+    height: 109px;
+    font-size: 9px;
+    line-height: 18px;
+  }
+  .slogan__text {
+    width: 242px;
+  }
+  .menu__burger__header {
+    width: 20px;
+    height: 20px;
+  }
+  .menu__burger__header.open_menu:before {
+    top: 10px;
+  }
+  .menu__burger__header.open_menu:after {
+    bottom: 9px;
+  }
+  .menu__burger__header span {
+    top: 10.5px;
+  }
+  .menu__burger__header span, .menu__burger__header:after, .menu__burger__header:before {
+    height: 1px;
+  }
+  .menu__burger__header:before {
+    top: 5px;
+  }
+  .menu__burger__header:after {
+    bottom: 3px;
+  }
+  .mouse__over {
+    margin-left: 26px;
+    padding-top: 5px;
+    font-size: 10px;
+  }
+  .nav.open_menu {
+    left: 20px;
+    top: 20px;
+    width: 100px;
+  }
+  .burger__sidebar {
+    width: 20px;
+    height: 20px;
+    left: 1.6em;
+    top: 4.4em;
+  }
+  .mouse__over__sidebar {
+    margin-left: 25px;
+    padding-top: 5px;
+    width: max-content;
+    font-size: 10px;
+  }
+  .burger__sidebar span, .burger__sidebar:after, .burger__sidebar:before {
+    height: 1px;
+  }
+  .burger__sidebar span {
+    top: 10.5px;
+  }
+  .wrapper__sidebar__burger.open_menu {
+    text-align: -webkit-right;
+  }
+  .burger__sidebar.open_menu {
+    left: 0;
+    top: 4.4em;
+    transform: translate(-100%);
+  }
+  .burger__sidebar.open_menu:before {
+    top: 10px;
+  }
+  .burger__sidebar.open_menu:after {
+    bottom: 9px;
+  }
+  .sidebar {
+    left: -160%;
+    margin: 0;
+    top: 72px;
+  } 
+  .sidebar.open_menu {
+    left: 0;
+    height: 93.5%;
+  }
+  .sidebar__photo, .photo {
+    width: auto;
+  }
+  .sidebar__photo {
+    height: 200px;
+    background: url(../img/Снимок\ экрана\ \(88\).png) no-repeat 0px -10px / cover;
+  }
+  .bookmark {
+    padding: 8px;
+  }
+  .main__content__title {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+  }
+  .my__project__text {
+    font-size: 12px;
+  }
+  .my__project__link {
+    font-size: 12px;
+  }
+  .my__project__bracket {
+    font-size: 12px;
+  }
+  .about__me__profession {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+  }
+  .about__me__name {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .about__me__discription, .my__work__experience__period {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 0;
+  }
+  .my__work__experience__section {
+    margin-bottom: 20px;
+  }
+  .my__work__experience__duty {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .my__work__experience__company {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  h5 {
+    font-size: 12px;
+  }
   .back_to_top {
-    right: 30px;
+    right: 20px;
+    bottom: 25px;
   }
 }

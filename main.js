@@ -8,6 +8,8 @@ let mouseOver = document.querySelector('.mouse__over');
 let mouseOverSidebar = document.querySelector('.mouse__over__sidebar');
 let capabilitiesItemLink = document.querySelector('.capabilities');
 let goTopBtn = document.querySelector('.back_to_top');
+let sloganText = document.querySelector('.slogan__text');
+let wrapperSidebarBurger = document.querySelector('.wrapper__sidebar__burger');
 
 document.addEventListener('click', e => {
   const backlight = (elem) => {
@@ -49,6 +51,8 @@ document.addEventListener("scroll", function() {
     menuNav.classList.remove('open_menu');
     wrapperBurger.classList.remove('open_menu');
     mouseOver.classList.remove('none');
+    sloganText.classList.remove('open__menu__slogan__text');
+
   }else {
     goTopBtn.classList.remove('back_to_top-show');
   }
@@ -57,6 +61,7 @@ document.addEventListener("scroll", function() {
 const moveSideBarBurger = () => {
   sideBarBurger.classList.toggle('open_menu');
   sideBar.classList.toggle('open_menu');
+  wrapperSidebarBurger.classList.toggle('open_menu');
   if(mouseOverSidebar.classList.contains('none')){
     setTimeout(() => {
       mouseOverSidebar.classList.toggle('none');
@@ -67,20 +72,35 @@ const moveSideBarBurger = () => {
 };
 
 document.addEventListener("DOMContentLoaded", function() { 
-  var widthWind = document.querySelector('body').offsetWidth;
-  if (widthWind <= 768) {
-    capabilitiesItemLink.addEventListener('click', moveSideBarBurger)
-  };
+  let widthWind = document.querySelector('body').offsetWidth;
+  moveMenuBurger(widthWind);
 });
 
-const moveMenuBurger = () => {
-  menuBurger.classList.toggle('open_menu');
-  menuNav.classList.toggle('open_menu');
-  wrapperBurger.classList.toggle('open_menu');
-  mouseOver.classList.toggle('none');
-}
-
-menuBurger.addEventListener('click', moveMenuBurger);
+const moveMenuBurger = z => {
+  const toggle = () => {
+    menuBurger.classList.toggle('open_menu');
+    menuNav.classList.toggle('open_menu');
+    wrapperBurger.classList.toggle('open_menu');
+    mouseOver.classList.toggle('none');
+  }
+  if(z <= 576) {
+    console.log(576)
+    menuBurger.addEventListener('click', () => {
+      toggle();
+      sloganText.classList.toggle('open__menu__slogan__text');
+    });
+    capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
+  }  else if(z <= 768) {
+    console.log(768)
+    menuBurger.addEventListener('click', () => {
+      toggle();
+    });
+    capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
+  }  else {
+    console.log('else')
+    menuBurger.addEventListener('click', toggle);
+  };
+};
 
 sideBarBurger.addEventListener('click', moveSideBarBurger);
 
