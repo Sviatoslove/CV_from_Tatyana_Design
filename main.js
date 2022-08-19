@@ -114,13 +114,10 @@ goTopBtn.addEventListener('click', () => {
 });
 
 const handleTabletChange = event => {
-  console.log(`change`)
   let widthWind = document.querySelector('body').offsetWidth;
   document.addEventListener('click', e => {
     if(widthWind <= 768) {
-      console.log(1)
       if(e.target === sideBarBurger && widthWind > 576) {
-        console.log(e.target === sideBarBurger)
         moveSideBarBurger();
         closeBurgerSidebar();
         checkNone();
@@ -128,12 +125,8 @@ const handleTabletChange = event => {
         moveMenuBurger();
       };
       if(widthWind <= 576) {
-        console.log(3)
-        console.log(event.matches)
         if(event.matches) {
-          console.log(2)
           if(e.target === menuBurger) {
-            console.log(e.target === menuBurger)
             moveMenuBurger();
             sloganText.classList.toggle('open__menu__slogan__text');
           }
@@ -165,28 +158,6 @@ mediaQuery.addListener(() => {
 });
 
 mediaQuery.addListener(handleTabletChange(mediaQuery))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var stepLeft = 0;
 var stepRight = 150;
