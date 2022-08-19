@@ -10,28 +10,31 @@ let capabilitiesItemLink = document.querySelector('.capabilities');
 let goTopBtn = document.querySelector('.back_to_top');
 let sloganText = document.querySelector('.slogan__text');
 let wrapperSidebarBurger = document.querySelector('.wrapper__sidebar__burger');
+let tel = document.querySelector('.tel');
 
 document.addEventListener('click', e => {
   const backlight = (elem) => {
     setTimeout(() => {
       elem.classList.add('backlight')
-    },1150);
+    }, 1150);
     setTimeout(() => {
       elem.classList.remove('backlight')
-    },1350);
+    }, 1350);
   }
   let menuLink = document.querySelectorAll('.menu__link');
   let backlightItem = document.querySelectorAll('.backlight_item');
   if(e.target === menuLink[0]) {
-    backlight(backlightItem[2]);
+    backlight(backlightItem[3]);
   }else if(e.target === menuLink[1]) {
     backlight(backlightItem[0]);
   }else if(e.target === menuLink[2]) {
-    backlight(backlightItem[1]);
+    backlight(backlightItem[2]);
   }else if(e.target === menuLink[3]) {
-    backlight(backlightItem[3]);
-  }else if(e.target === menuLink[4]) {
     backlight(backlightItem[4]);
+  }else if(e.target === menuLink[4]) {
+    backlight(backlightItem[5]);
+  }else if(e.target === menuLink[5]) {
+    backlight(backlightItem[1]);
   }
 })
 
@@ -45,7 +48,6 @@ goTopBtn.addEventListener('click', backToTop);
 
 document.addEventListener("scroll", function() {
   if(window.pageYOffset >= 200) {
-    console.log(window.pageYOffset)
     goTopBtn.classList.add('back_to_top-show');
     menuBurger.classList.remove('open_menu');
     menuNav.classList.remove('open_menu');
@@ -84,25 +86,24 @@ const moveMenuBurger = z => {
     mouseOver.classList.toggle('none');
   }
   if(z <= 576) {
-    console.log(576)
     menuBurger.addEventListener('click', () => {
       toggle();
       sloganText.classList.toggle('open__menu__slogan__text');
     });
     capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
   }  else if(z <= 768) {
-    console.log(768)
     menuBurger.addEventListener('click', () => {
       toggle();
     });
     capabilitiesItemLink.addEventListener('click', moveSideBarBurger);
   }  else {
-    console.log('else')
     menuBurger.addEventListener('click', toggle);
   };
 };
 
 sideBarBurger.addEventListener('click', moveSideBarBurger);
+tel.addEventListener('click', moveSideBarBurger);
+
 
 var stepLeft = 0;
 var stepRight = 150;
