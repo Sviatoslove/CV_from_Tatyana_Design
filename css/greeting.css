@@ -1,0 +1,69 @@
+.greeting__content {
+  margin: 0 auto;
+}
+
+.greeting__me {
+  margin-top: 58px;
+}
+
+.greeting__hello {
+  text-align: center;
+}
+
+.greeting__hello__i {
+  width: 471px;
+  height: 120px;
+  margin: 0 auto;
+  font-family: 'Gogol';
+  font-size: 99px;
+  text-shadow: #000000 -1px -1px 3px;
+}
+
+.greeting__hello__name {
+  font-family: "Archivo", sans-serif;
+  font-size: 100px;
+  margin: 0 auto;
+  line-height: 80px;
+  width: fit-content;
+  text-shadow: #000000 -1px -1px 3px;
+}
+
+.greeting__profession {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 50px;
+  color: #707070;
+}
+
+.greeting__avatar {
+  position: relative;
+  width: 100%;
+  max-width: 659px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.greeting__avatar:before {
+  position: absolute;
+  content: '';
+  top: 60px;
+  right: 60px;
+  width: 100%;
+  max-width: 659px;
+  height: 659px;
+  border-radius: 100%;
+  background: rgba(221, 249, 80, 0.4);
+  filter: blur(50px)
+}
+
+.avatar {
+  width: 100%;
+  max-width: 479px;
+  height: 479px;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: 0% 0%;
+  filter: grayscale(100%);
+}

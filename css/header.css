@@ -1,0 +1,33 @@
+header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 138px;
+  background-color: #F5F5F5;
+}
+
+.menu__content {
+  padding-top: 10px;
+}
+
+.burger {
+  height: 118px;
+  margin: 0 auto;
+  background-color: #DFF770;
+  border-radius: 59px;
+  align-items: center;
+}
+
+.burger__header__icon {
+  margin-left: 67px;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav__menu {
+  justify-content: space-evenly;
+}

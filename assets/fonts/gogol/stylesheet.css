@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Gogol';
+    src: url('Gogol.eot');
+    src: url('Gogol.eot?#iefix') format('embedded-opentype'),
+        url('Gogol.woff2') format('woff2'),
+        url('Gogol.woff') format('woff'),
+        url('Gogol.ttf') format('truetype'),
+        url('Gogol.svg#Gogol') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

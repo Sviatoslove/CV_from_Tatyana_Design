@@ -1,428 +1,69 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/media.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon_svyatoslav.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./assets/fonts/gogol/stylesheet.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/greeting.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
     <header>
-        <div class="container slogan_image">
-            <div class="content content__menu">
-                <div class="logo"></div>
-                <div class="wrapper__burger">
-                    <div class="menu__burger__header">
-                        <div class="mouse__over">
-                            Меню
-                        </div>
-                        <span></span>
-                    </div>
-                    <div class="nav">
-                        <div class="menu d-flex">
-                            <div class="menu__item">
-                                <a class="menu__link" href="#1">
-                                Проекты
-                                </a>
-                            </div>
-                            <div class="menu__item">
-                                <a class="menu__link capabilities" href="#2">
-                                Способности
-                                </a>
-                            </div>
-                            <div class="menu__item">
-                                <a class="menu__link" href="#3">
-                                Обо мне
-                                </a>
-                            </div>
-                            <div class="menu__item">
-                                <a class="menu__link" href="#4">
-                                Трудовая деятельность
-                                </a>
-                            </div>
-                            <div class="menu__item">
-                                <a class="menu__link" href="#5">
-                                Образование
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tel">
-                    <a class="menu__link" href="#6">
-                        +7 (910) 737 47 99
-                    </a>
-                </div>
+      <div class="container menu__content">
+        <div class="menu__wrapper__burger burger d-flex">
+          <div class="burger__header">
+            <div class="burger__header__icon">
+              <img src="./assets/icons/home.svg" alt="Menu" />
             </div>
-            <div class="slogan__content">
-                <h1 class="slogan__text">
-                    "Возьми в плен свой успех"
-                </h1>
+            <span></span>
+          </div>
+          <div class="burger__nav nav">
+            <div class="nav__menu d-flex">
+              <div class="nav__menu__item menu_item">
+                <a class="menu_item__link" href="#1"> Услуги </a>
+              </div>
+              <div class="nav__menu__item menu_item">
+                <a class="menu_item__link capabilities" href="#2">
+                  Мои навыки
+                </a>
+              </div>
+              <div class="nav__menu__item menu_item">
+                <a class="menu_item__link" href="#3"> Портфолио </a>
+              </div>
+              <div class="nav__menu__item menu_item">
+                <a class="menu_item__link" href="#4"> Резюме </a>
+              </div>
+              <div class="nav__menu__item menu_item">
+                <a class="menu_item__link" href="#6"> Контакты </a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </header>
-    <section class="main d-flex">
-        <div class="container">
-            <div class="wrapper__sidebar__burger">
-                <div class="burger__sidebar">
-                    <div class="mouse__over__sidebar">
-                        Карточка с фото
-                    </div>
-                    <span></span>
-                </div>
-            </div>
-            <div class="content">
-                <!--sidebar-->
-                <div class="sidebar backlight_item">
-                    <div class="photo">
-                        <div class="bookmark" id="2"></div>
-                        <div class="sidebar__photo"></div>
-                    </div>
-                    <!--tech skills section-->
-                    <div class="tech__skills">
-                        <h3 class="sidebar__title">
-                            Инструменты для достижения цели
-                        </h3>
-                        <ul class="skills__list">
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    HTML5
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    CSS3
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    GIT
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    WebPack
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    JavaScript
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    React.js
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    Node.js
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--soft skills section-->
-                    <div class="soft__skills">
-                        <h3 class="sidebar__title">
-                            Способности к сотрудничеству
-                        </h3>
-                        <ul class="skills__list">
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    Надёжность
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    Твёрдость духа
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    Гибкость и благоразумие
-                                </span>
-                            </li>
-                            <li class="skills__item">
-                                <span class="skills__item__text">
-                                    Мягкость и уступчивость
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--contacts-->
-                    <div class="contacts backlight_item" id ="6">
-                        <h3 class="sidebar__title">
-                            Открыт для общения
-                        </h3>
-                        <div class="block__link">
-                            <span class="contacts__type">
-                                T:
-                            </span> 
-                            <a class="contacts__link" href="tel:+79107374799">
-                                +7 (910) 737 47 99
-                            </a>
-                        </div>
-                        <div class="block__link">
-                            <span class="contacts__type">
-                                E:
-                            </span>
-                            <a class="contacts__link" href="mailto:svyatpopov86@gmail.com">
-                                svyatpopov86@gmail.com
-                            </a>
-                        </div>
-                        <div class="contacts__telegram">
-                            <span class="contacts__type">
-                                M:
-                            </span>
-                            <a class="contacts__link__telegram" href="https://t.me/Vana_Svyat">
-                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" class="bi bi-telegram" viewBox="-1 -1 18 18">
-                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--main content-->
-                <div class="main__content">
-                    <!--about me section-->
-                    <div class="about__me backlight_item" id="3">
-                        <h2 class="about__me__profession">
-                            Front-End Developer
-                        </h2>
-                        <h1 class="about__me__name">
-                            Sviatoslav Popov
-                        </h1>
-                        <p class="about__me__discription">
-                            Готов работать в новой и несравнимо ни с чем увлекательной для себя сфере. Приветствую решение сложных задач и расширение своих способностей, как специалиста готового помагать людям брать в плен их успех! Буду рад расти и развиваться вместе с вами. Гибкость графика и индивидуально-личностный подход к каждому клиенту - гарантирую.
-                        </p>
-                    </div>
-                    <!--my projects section-->
-                    <div class="my__project__section backlight_item"id="1">
-                        <h3 class="main__content__title">
-                            Проекты
-                        </h3>
-                        <ul class="my__project__list">
-                            <li class="my__project__item">
-                                <span class="my__project__text">
-                                    <a class="my__project__link" href="https://hellenglish.goit.global/">
-                                        https://hellenglish.goit.global/
-                                    </a>
-                                    ......
-                                    <span class="my__project__bracket">
-                                        [
-                                    </span>
-                                    HTML5, CSS3
-                                    <span class="my__project__bracket">
-                                        ]
-                                    </span>
-                                </span>
-                            </li>
-                            <li class="my__project__item">
-                                <span class="my__project__text">
-                                    <a class="my__project__link" href="https://cryptohub.goit.global/[ JavaScript ]">
-                                        https://cryptohub.goit.global/
-                                    </a>
-                                    .......
-                                    <span class="my__project__bracket">
-                                        [
-                                    </span>
-                                    JavaScript
-                                    <span class="my__project__bracket">
-                                        ]
-                                    </span>
-                                </span>
-                            </li>
-                            <li class="my__project__item">
-                                <span class="my__project__text">
-                                    <a class="my__project__link" href="https://kidslike.goit.global/">
-                                        https://kidslike.goit.global/
-                                    </a>
-                                    ..............
-                                    <span class="my__project__bracket">
-                                        [
-                                    </span>
-                                    React.js, Node.js
-                                    <span class="my__project__bracket">
-                                        ]
-                                    </span>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--my work experience section-->
-                    
-                    <div class="backlight_item">
-                        <!--company 4-->
-                        <div class="my__work__experience__section">
-                            <h4 class="my__work__experience__position" id="4">
-                                Оператор и наладчик оборудования
-                                <span class="my__work__experience__company">
-                                    Цеха по производству упаковачных коробов из картона
-                                </span>
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                <span class="my__work__experience__company">
-                                    OU TALBOKS
-                                </span>
-                            </h4>
-                            <p class="my__work__experience__period">
-                                Март 2021 - Апрель 2022
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                Eesti
-                            </p>
-                            <ul class="my__work__experience__duties">
-                                <li class="my__work__experience__duty">
-                                    Настройка, ремонт и обслуживание печатного оборудования.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Работа на печатном оборудовании.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Отгрузка готовой продукции и приём исходной заготовки на погрузчике.
-                                </li>
-                            </ul>
-                        </div>
-                        <!--company 3-->
-                        <div class="my__work__experience__section">
-                            <h4 class="my__work__experience__position">
-                                Техник по эксплуатации и ремонту газового оборудования 5 разряда
-                                <span class="my__work__experience__company">
-                                    Отдела ВДГО
-                                </span>
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                <span class="my__work__experience__company">
-                                    ОАО Газпром "Северное объединение по эксплуатации газового хозяйства газораспределение Белгород"
-                                </span>
-                            </h4>
-                            <p class="my__work__experience__period">
-                                Ноябрь 2008 - Февраль 2021
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                Россия
-                            </p>
-                            <ul class="my__work__experience__duties">
-                                <li class="my__work__experience__duty">
-                                    Осмотр на соблюдение техники безопасности и условий надлежащего использования газового оборудования в жилых помещениях.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Проверка на соответствие требованиям установки газового оборудования.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Ремонт и техническое обслуживание газового оборудования.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Ведение документации и проведение инструктажей.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Работа с людьми.
-                                </li>
-                            </ul>
-                        </div>
-                        <!--company 2-->
-                        <div class="my__work__experience__section">
-                            <h4 class="my__work__experience__position">
-                                Термист
-                                <span class="my__work__experience__company">
-                                    Отдела контроля за температурными режимами
-                                </span>
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                <span class="my__work__experience__company">
-                                    Оскольский Завод Металлургического Машиностроения
-                                </span>
-                            </h4>
-                            <p class="my__work__experience__period">
-                                Март 2008 - Ноябрь 2008
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                Россия
-                            </p>
-                            <ul class="my__work__experience__duties">
-                                <li class="my__work__experience__duty">
-                                    Соблюдение температурных режимов в промышленных печах для термообработки металла.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Чистка и обслуживание печей для термообработки.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Ведение документации.
-                                </li>
-                            </ul>
-                        </div>
-                        <!--company 1-->
-                        <div class="my__work__experience__section">
-                            <h4 class="my__work__experience__position">
-                                Оператор
-                                <span class="my__work__experience__company">
-                                    пульта управления 5 разряда
-                                </span>
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                <span class="my__work__experience__company">
-                                    ООО "Бентопром"
-                                </span>
-                            </h4>
-                            <p class="my__work__experience__period">
-                                Ноябрь 2007 - Декабрь 2007
-                                <span class="my__work__experience__divider">
-                                    |
-                                </span>
-                                Россия
-                            </p>
-                            <ul class="my__work__experience__duties">
-                                <li class="my__work__experience__duty">
-                                    Приём и упаковка сырья.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Фасовка и распределение сырья на складе.
-                                </li>
-                                <li class="my__work__experience__duty">
-                                    Отгрузка готовой продукции.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!--my education section-->
-                    <div class="my__education backlight_item" id="5">
-                        <h3 class="main__content__title">
-                            Образование
-                        </h3>
-                        <h4>
-                            <span class="my__work__experience__company">
-                            Оскольский Политехнический Колледж
-                            </span>
-                        </h4>
-                        <h5>
-                            Обработка металлов давлением, Прокатчик
-                        </h5>
-                        <p class="my__work__experience__period">
-                            Сентябрь 2001 - Июнь 2005
-                            <span class="my__work__experience__divider">
-                                |
-                            </span>
-                            Россия
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <a class="back_to_top" title="Наверх">∧</a>    
+    <section class="greeting">
+      <div class="container greeting__content">
+        <div class="greeting__me">
+          <h1 class="greeting__hello">
+            <p class="greeting__hello__i">Привет, я</p>
+            <p class="greeting__hello__name">Святослав Попов</p>
+          </h1>
+          <h3 class="greeting__profession">Фронт-энд разработчик</h3>
+          <div class="greeting__avatar">
+            <img
+              src="./img/my_photo.png"
+              alt="Photo"
+              class="avatar"
+            />
+          </div>
         </div>
+      </div>
     </section>
-    <script src="main.js"></script>
-</body>
+  </body>
 </html>
